@@ -12,6 +12,7 @@ def primes(number_of_primes):
         while len(list) < number_of_primes:
             for x in list:
                 if counter % x:
+                    check = True
                     continue
                 else:
                     check = False
