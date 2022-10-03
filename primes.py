@@ -4,12 +4,22 @@
 def primes(number_of_primes):
     list = []
     list.append(2)
+    check = True
+    counter = list[0]+1
     if number_of_primes == 1:
         return list
     else:
-        for x in range(2,number_of_primes):
-            for i in range(1,x):
-                if (x%i) == 0:
-                    list.append(x)
-
+        while len(list) < number_of_primes:
+            for x in list:
+                if counter % x:
+                    continue
+                else:
+                    check = False
+                    break
+            if check:
+                list.append(counter)
+            counter += 2
+    print(list)
     return list
+
+primes(10)
