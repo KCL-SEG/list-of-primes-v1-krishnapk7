@@ -8,7 +8,7 @@ def primes(number_of_primes):
         return list
     else:
         for x in range(2,number_of_primes):
-            for i in range(x):
+            for i in range(1,x):
                 if (x%i) == 0:
                     list.append(x)
 
